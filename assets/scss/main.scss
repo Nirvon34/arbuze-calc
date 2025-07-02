@@ -1,0 +1,76 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #343a40;
+}
+
+select, .btn, .form-control {
+  border-radius: 8px;
+}
+
+.region-select {
+  max-width: 300px;
+  margin: 0 auto 20px;
+}
+
+.pump-buttons,
+.tariff-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.pump-buttons button,
+.tariff-buttons button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  min-width: 120px;
+  border: 1px solid #0d6efd;
+  background-color: white;
+  color: #0d6efd;
+  transition: all 0.3s;
+}
+
+.pump-buttons button.active,
+.tariff-buttons button.active {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.result-block {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.result-block .economy {
+  font-size: 1.5rem;
+  color: #28a745;
+  font-weight: 600;
+}
+
+.btn-order {
+  margin-top: 15px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: #198754;
+  color: white;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.btn-order:hover {
+  background-color: #146c43;
+}
+ч
