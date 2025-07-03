@@ -16,9 +16,9 @@
   <div class="container mt-5">
     <h1 class="text-center mb-4">Калькулятор тарифа</h1>
 
+    <!-- Регион -->
     <div class="row justify-content-center">
       <div class="col-md-6">
-        <!-- Регион -->
         <label for="region-select" class="form-label">Выберите регион:</label>
         <select id="region-select" class="form-select" name="region">
           <option value="moscow">Москва</option>
@@ -30,12 +30,38 @@
 
     <!-- Прокачка -->
     <div class="row justify-content-center mt-4">
+      <div class="col-md-6 text-center">
+        <label for="flowRange" class="form-label">Выберите объем прокачки (тонн): <span id="flowValue">0</span> т</label>
+        <input type="range" class="form-range" min="0" max="1200" step="100" id="flowRange" value="0">
+      </div>
+    </div>
+
+    <!-- Тип топлива -->
+    <div class="row justify-content-center mt-4">
       <div class="col-md-8">
-        <div class="d-flex flex-column flex-md-row justify-content-between gap-3">
-          <div class="upgrade-item p-3 border rounded text-center">Прокачка 1</div>
-          <div class="upgrade-item p-3 border rounded text-center">Прокачка 2</div>
-          <div class="upgrade-item p-3 border rounded text-center">Прокачка 3</div>
+        <label class="form-label">Выберите тип топлива:</label>
+        <div class="btn-group w-100" role="group" aria-label="Тип топлива">
+          <input type="radio" class="btn-check" name="fuel" id="fuel-gasoline" value="бензин" autocomplete="off" checked>
+          <label class="btn btn-outline-secondary" for="fuel-gasoline">Бензин</label>
+
+          <input type="radio" class="btn-check" name="fuel" id="fuel-gas" value="газ" autocomplete="off">
+          <label class="btn btn-outline-secondary" for="fuel-gas">Газ</label>
+
+          <input type="radio" class="btn-check" name="fuel" id="fuel-diesel" value="дт" autocomplete="off">
+          <label class="btn btn-outline-secondary" for="fuel-diesel">ДТ</label>
         </div>
+      </div>
+    </div>
+
+    <!-- Выбор бренда -->
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-6">
+        <label class="form-label" for="brand-select">Выберите бренд:</label>
+        <select id="brand-select" class="form-select" name="brand">
+          <option value="Роснефть">Роснефть</option>
+          <option value="Татнефть">Татнефть</option>
+          <option value="Лукойл">Лукойл</option>
+        </select>
       </div>
     </div>
 
@@ -101,6 +127,8 @@
             <!-- Скрытые поля -->
             <input type="hidden" name="tariff" id="selected-tariff" value="Избранный">
             <input type="hidden" name="region" id="selected-region" value="moscow">
+            <input type="hidden" name="fuel" id="selected-fuel">
+            <input type="hidden" name="brand" id="selected-brand">
           </div>
           <div class="modal-footer">
             <button type="submit" class="btn btn-primary">Отправить</button>
@@ -111,7 +139,7 @@
     </div>
   </div>
 
-  <!-- JS библиотеки и скрипты -->
+  <!-- JS библиотеки -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
